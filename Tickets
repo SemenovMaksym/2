@@ -1,0 +1,35 @@
+namespace DIMAdidick3000
+{
+    public class Ticket
+    {
+        private static int nextId = 1; // Статическое поле для генерации уникального ID
+
+        public int ticketId { get; set; }
+    public string description { get; set; }
+    public decimal price { get; set; }
+    public DateTime created { get; set; } = DateTime.Now;
+    public string payment_type { get; set; }
+    public DateTime arrival_date { get; set; }
+    public DateTime departure_date { get; set; }
+
+        public Ticket(string description, string payment_type, decimal price, DateTime arrival_date, DateTime departure_date)
+        {
+            this.ticketId = nextId++; // Присваиваем уникальный ID и инкрементируем _nextId
+
+            this.description = description;
+
+            this.price = price; 
+            this.payment_type = payment_type;
+
+            this.created = DateTime.Now;
+
+            this.arrival_date = arrival_date;
+            this.departure_date = departure_date;
+
+        }
+
+    public static List<Ticket> tiketslist = new List<Ticket>();
+
+
+    }
+}
