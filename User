@@ -1,0 +1,22 @@
+namespace DIMAdidick3000
+{
+    class User : Person
+    {
+        public string tickets { get; set; }
+
+        public User(string name, string email, string tickets) : base(name, email)
+        {
+            this.tickets = tickets;
+        }
+
+        public static List<User> userlist = new List<User>();
+
+        
+
+
+
+
+
+
+    }
+}
