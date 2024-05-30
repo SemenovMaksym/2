@@ -1,0 +1,19 @@
+namespace DIMAdidick3000
+{
+    class Person
+    {
+        public static int nextId = 1; // Статическое поле для генерации уникального ID
+        public int id { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+
+
+
+        public Person(string name, string email)
+        {
+            this.name = name;
+            this.email = email;
+            id = nextId++;
+        }
+    }
+}
